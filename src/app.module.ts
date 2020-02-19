@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { HeroesModule } from './heroes/heroes.module';
 
@@ -17,8 +15,6 @@ import { HeroesModule } from './heroes/heroes.module';
       synchronize: true,
     }),
     HeroesModule
-  ],
-  controllers: [AppController],
-  providers: [AppService],
+  ]
 })
 export class AppModule {}
