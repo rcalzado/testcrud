@@ -5,7 +5,7 @@ import { HeroesService } from './heroes.service';
 
 @Crud({
   model: {
-    type: Hero,
+    type: Hero
   },
 })
 @Controller('heroes')

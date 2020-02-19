@@ -12,7 +12,7 @@ import { HeroesModule } from './heroes/heroes.module';
       password: 'mysqladmin',
       database: 'testcrud',
       entities: [ __dirname + '/**/*.entity.{ts,js}'],
-      synchronize: true,
+      synchronize: true
     }),
     HeroesModule
   ]

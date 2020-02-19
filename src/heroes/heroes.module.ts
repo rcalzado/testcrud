@@ -8,6 +8,6 @@ import { HeroesController } from './heroes.controller';
 @Module({
   imports: [TypeOrmModule.forFeature([Hero])],
   providers: [HeroesService],
-  controllers: [HeroesController],
+  controllers: [HeroesController]
 })
 export class HeroesModule {}
