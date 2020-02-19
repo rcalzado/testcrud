@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable } from 'typeorm';
 import { IsOptional, IsDefined, IsString, IsNumber } from 'class-validator';
 import { CrudValidationGroups } from '@nestjsx/crud';
 import { Ability } from '../abilities/ability.entity';
@@ -23,10 +23,11 @@ export class Hero {
 	@Column()
 	power: number;
 
-	@OneToMany(type => Ability, ability => ability.hero, {
+	@ManyToMany(type => Ability, {
 		cascade: true,
         eager: true
 	})
+	@JoinTable()
 	abilities: Ability[];
 
 }

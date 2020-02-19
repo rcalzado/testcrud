@@ -1,5 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
-import { Hero } from '../heroes/hero.entity';
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
 export class Ability {
@@ -9,8 +8,5 @@ export class Ability {
 
     @Column()
     description: string;
-
-    @ManyToOne(type => Hero, hero => hero.abilities)
-    hero: Hero;
 
 }
