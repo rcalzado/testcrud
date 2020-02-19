@@ -4,11 +4,19 @@ import { Hero } from './hero.entity';
 import { HeroesService } from './heroes.service';
 
 @Crud({
-  model: {
-    type: Hero
-  },
+	model: {
+		type: Hero
+	},
+
+	query: {
+		join: {
+		  abilities: {
+			eager: true
+		  }
+		}
+	  }	
 })
 @Controller('heroes')
 export class HeroesController {
-  constructor(public service: HeroesService) {}
+	constructor(public service: HeroesService) { }
 }
