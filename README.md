@@ -73,3 +73,8 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
   Nest is [MIT licensed](LICENSE).
+
+## Related Documentation
+
+-  https://docs.nestjs.com/recipes/crud-utilities
+-  https://github.com/nestjsx/crud/wiki/Controllers
